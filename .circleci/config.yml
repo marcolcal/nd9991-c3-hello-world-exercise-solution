@@ -81,7 +81,7 @@ jobs:
       # Uncomment the line below if you want to fail the current step
       # - run: return 1
       - destroy_environment
-        when: on_fail
+        
 
 #Adding a change to commit asdasdadad
   # Exercise: Config and Deployment
@@ -120,7 +120,7 @@ jobs:
               return 1
             fi
       - destroy_environment
-        when: on_fail      
+            
   
   # Exercise: Promote to Production - Job 1 
   # Prerequisite: 
