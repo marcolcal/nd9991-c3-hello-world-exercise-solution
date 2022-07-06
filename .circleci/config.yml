@@ -133,6 +133,8 @@ jobs:
   # --stack-name production-distro \
   # --parameter-overrides PipelineID="mybucket644752792305" \ # Name of the S3 bucket you created manually.
   
+
+  
   # Job 1
   # Executes the bucket.yml - Deploy an S3 bucket, and interface with that bucket to synchronize the files between local and the bucket.
   # Note that the `--parameter-overrides` let you specify a value that override parameter value in the bucket.yml template file.
