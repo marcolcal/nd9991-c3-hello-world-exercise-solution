@@ -1,0 +1,13 @@
+A previous job named resources with the workflow ID so that it's easy to refer to them later. For example, if we want to create an S3 bucket:
+aws cloudformation deploy \
+  --template-file bucket.yml \
+  --stack-name "${CIRCLE_WORKFLOW_ID}" \
+  --parameter-overrides NAME="${CIRCLE_WORKFLOW_ID}"
+And copy the web files to the bucket:
+run: aws s3 sync . s3://"${CIRCLE_WORKFLOW_ID}" --delete
+
+
+aws cloudformation deploy \
+--template-file cloudfront.yml \
+--stack-name cloudfront \
+--parameter-overrides PipelineID="${CIRCLE_WORKFLOW_ID}"
